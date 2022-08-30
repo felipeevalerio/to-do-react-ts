@@ -1,0 +1,40 @@
+.tasksDashboard {
+    margin-top: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+         
+        strong {
+            font-size: 0.875rem;
+            line-height: 1.4;
+            gap: 0.5rem;
+            display: flex;
+
+            span {
+                background-color: var(--gray-400);
+                color: var(--gray-200);
+                padding: 0.125rem 0.5rem;
+                font-size: 0.75rem;
+                border-radius: 50%;
+            }
+            
+            &.numberOfCreatedTasks {
+                color: var(--blue-300); 
+            }
+
+            &.numberOfConcludedTasks {
+                color: var(--purple-300);
+            }
+        }
+    }
+
+    .tasksContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

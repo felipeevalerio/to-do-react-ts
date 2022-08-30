@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "./components/Header/Header";
 import { TaskCreator } from "./components/TaskCreator/TaskCreator";
 import styles from './App.module.scss';
+import { TasksDashboard } from "./components/TasksDashboard/TasksDashboard";
 
 export function App() {
     const [tasks, setTasks] = useState<string[]>([]);
@@ -14,10 +15,10 @@ export function App() {
         <div className={styles.app}>
             <Header/>
 
-            <div className={styles.wrapper}>
+            <main className={styles.wrapper}>
                 <TaskCreator createTask={createTask} />
-                <main></main>
-            </div>
+                <TasksDashboard tasks={tasks}/>
+            </main>
         </div>
     )
 }
