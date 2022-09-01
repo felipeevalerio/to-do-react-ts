@@ -13,6 +13,7 @@ export function TaskCreator ({ createTask }: TaskCreatorProps) {
         event.preventDefault();
 
         createTask(newTask);
+        setNewTask('');
     };
     
     function handleNewTask(event: ChangeEvent<HTMLInputElement>) {
@@ -25,6 +26,7 @@ export function TaskCreator ({ createTask }: TaskCreatorProps) {
                 type="text" 
                 onChange={handleNewTask} 
                 placeholder="Adicione uma nova tarefa"
+                value={newTask}
             />
             <button type="submit">
                 Criar
